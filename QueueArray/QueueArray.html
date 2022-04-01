@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="../HomePage/img/favicon.ico" type="image/x-icon">
+	<title>
+		Implementation of Array Using Queue
+	</title>
+
+	<link rel="stylesheet" href="visualizationPageStyle.css">
+
+
+	<!-- jqueury stuff.  Only used for the animation speed slider. -->
+	<link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
+	<script src="ThirdParty/jquery-1.5.2.min.js"></script>
+	<script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+	<!-- Javascript for the actual visualization code -->
+	<script type="text/javascript" src="AnimationLibrary/CustomEvents.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/UndoFunctions.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/AnimatedObject.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/AnimatedLabel.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/AnimatedCircle.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/AnimatedRectangle.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/AnimatedLinkedList.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/HighlightCircle.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/Line.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/ObjectManager.js"> </script>
+	<script type="text/javascript" src="AnimationLibrary/AnimationMain.js"> </script>
+
+	<script type="text/javascript" src="AlgorithmLibrary/Algorithm.js"> </script>
+	<script type="text/javascript" src="AlgorithmLibrary/QueueArray.js"> </script>
+
+
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+
+
+	<div id="container">
+
+		<div id="header">
+			<table>
+				<th>
+					<h1>Implementation of Array Using Queue</h1>
+				</th>
+				<th>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../HomePage/img/LOGO.png" width="50px">
+				</th>
+			</table>
+		</div>
+
+		<div=id="mainContent">
+
+			<div id="algoControlSection">
+				<table id="AlgorithmSpecificControls"> </table>
+			</div>
+
+			<div id="para" style="position:absolute; right:50px; top:100px;">
+				<p class="expert1" style=" border-style:double;">
+					<b>EnQUEUE</b><br>
+					Step 1 - Check whether queue is FULL. (rear == SIZE-1) <br>
+					Step 2 - If it is FULL, then display "Queue is FULL!!! <br>
+					Insertion is not possible!!!" and terminate the function.<br>
+					Step 3 - If it is NOT FULL, then increment rear value by <br>
+					one (rear++) and set queue[rear] = value.<br>
+				</p>
+			</div>
+			<div id="para2" style="position:absolute; right:50px; top:300px;">
+				<p class="expert2" style=" border-style:double;">
+					<b>DeQUEUE</b><br>
+					Step 1 - Check whether queue is EMPTY. (front == rear) <br>
+					Step 2 - If it is EMPTY, then display "Queue is EMPTY!!!<br>
+					Deletion is not possible!!!" and terminate the function.<br>
+					Step 3 - If it is NOT EMPTY, then increment the front <br>
+					value by one (front ++). Then display queue[front] as <br>
+					deleted element.Then check whether both front and rear<br>
+					are equal (front == rear), if it TRUE, then set both<br>
+					front and rear to '-1' (front = rear = -1).<br>
+				</p>
+
+			</div>
+
+			<canvas id="canvas" width="900" height="500"></canvas>
+
+			<div id="generalAnimationControlSection">
+				<table id="GeneralAnimationControls"> </table>
+			</div>
+	</div>
+	<div id="footer">
+		<p>Copyright @ 2021 Fun Learn Designed by Raj, Utkarsh, Anuj, Suraj</p>
+	</div>
+
+
+	</div>
+
+</body>
+
+</html>
